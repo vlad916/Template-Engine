@@ -100,7 +100,6 @@ const employeeDetails = [{
                     "Intern",
                     "I dont' want to add a Team member"
                 ],
-                
             }
         ).then((data) => {
             console.log(data.title)
@@ -136,7 +135,7 @@ const employeeDetails = [{
                 interns.push(new Intern(name, id, email, school));
                 break;
             }
-            console.log("===========================");
+            console.log("================================");
             console.log(manager);
             console.log(engineers);
             console.log(interns);
@@ -148,10 +147,10 @@ const employeeDetails = [{
         console.log("rendering HTML");
         try {
             const employees = [...manager, ...engineers, ...interns];
-            console.log("===========================");
+            console.log("================================");
             console.log(employees)
             const htmlcontent = await render(employees);
-            fs.writeFile("output/team_profile.html", htmlcontent, err => {
+            fs.writeFile("output/team.html", htmlcontent, err => {
                 if (err) {
                     return console.log(err);
                 }
