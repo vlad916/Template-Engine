@@ -83,6 +83,28 @@ const employeeDetails = [{
             filter: (input) => input.trim()
     }];
 
+    let allDetails = [];
+    const manager = [];
+    const engineers = [];
+    const interns = [];
+
+    function getRole() {
+        inquirer.prompt (
+            {
+                type: "list",
+                message: "What type of Team member would you like to add:",
+                name: "title",
+                choices: [
+                    "Manager",
+                    "Engineer",
+                    "Intern",
+                    "I dont' want to add a Team member"
+                ],
+                
+            }
+        
+
+
 
 
 
