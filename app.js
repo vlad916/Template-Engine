@@ -70,7 +70,20 @@ const employeeDetails = [{
             filter: (input) => input.trim()
     }];
 
-    
+    const internDetails = [{
+            type: "input",
+            message: "What is your Intern's school:",
+            name: "school",
+            validate: (input) => {
+                if (/[a-z\s\-]+/gi.test(input.trim()) === true) {
+                    return true;
+                }
+                return 'Please enter a valid school name';
+            },
+            filter: (input) => input.trim()
+    }];
+
+
 
 
 
