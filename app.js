@@ -44,6 +44,21 @@ const employeeDetails = [{
         }
     }];
 
+    const managerDetails = [{
+            type: "input",
+            message: "What is your Manager's office number",
+            name: "officeNum",
+            validate: (input) => {
+                if (/^[0-9]+$/gi.test(input.trim()) === true) {
+                    return true;
+                }
+                return "Please enter a valid number";
+            },
+            filter: (input) => input.trim()
+    }];
+
+    
+
 
 
 
