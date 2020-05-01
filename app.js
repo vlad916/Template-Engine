@@ -122,6 +122,28 @@ const employeeDetails = [{
         });        
     }
 
+    function getData(title) {
+        inquirer.prompt(allDetails).then((data) => {
+            const {name, id, email, officeNum, github, school} = data;
+            switch (title) {
+                case "Manager":
+                manager.push(new Manager(name, id, email, officeNum));
+                break;
+            case "Engineer":
+                engineers.push(new Engineer(name, id, email, github));
+                break;
+            case "Intern":
+                interns.push(new Intern(name, id, email, school));
+                break;
+            }
+            console.log("===========================");
+            console.log(manager);
+            console.log(engineers);
+            console.log(interns);
+            getRole();
+        });
+    }
+
 
 
 
