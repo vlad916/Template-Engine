@@ -98,12 +98,12 @@ const employeeDetails = [{
                     "Manager",
                     "Engineer",
                     "Intern",
-                    "I dont' want to add a Team member"
+                    "I don't want to add a Team member anymore"
                 ],
             }
         ).then((data) => {
             console.log(data.title)
-            if (data.title === "I dont' want to add a Team member") {
+            if (data.title === "I don't want to add a Team member anymore") {
                 renderHTML();
             }
             else if (data.title === "Manager") {
