@@ -102,7 +102,25 @@ const employeeDetails = [{
                 ],
                 
             }
-        
+        ).then((data) => {
+            console.log(data.title)
+            if (data.title === "I dont' want to add a Team member") {
+                renderHTML();
+            }
+            else if (data.title === "Manager") {
+                allDetails = [...employeeDetails, ...managerDetails];
+                getData(data.title);
+            }
+            else if (data.title === "Engineer") {
+                allDetails = [...employeeDetails, ...engineerDetails];
+                getData(data.title);
+            }
+            else if (data.title === "Intern") {
+                allDetails = [...employeeDetails, ...internDetails];
+                getData(data.title);
+            }
+        });        
+    }
 
 
 
