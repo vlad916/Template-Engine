@@ -19,7 +19,7 @@ const employeeDetails = [{
         filter: (input) => input.trim ()
     },
     {
-        type: "number",
+        type: "input",
         message: "What is your Team member's Id:",
         name: "id",
         validate: (input) => {
@@ -144,6 +144,26 @@ const employeeDetails = [{
         });
     }
 
+    async function renderHTML() {
+        console.log("rendering HTML");
+        try {
+            const employees = [...manager, ...engineers, ...interns];
+            console.log("===========================");
+            console.log(employees)
+            const htmlcontent = await render(employees);
+            fs.writeFile("output/team_profile.html", htmlcontent, err => {
+                if (err) {
+                    return console.log(err);
+                }
+                console.log("HTML file created successfully");
+            });
+        }
+        catch (err) {
+            console.log("Something went wrong in creating HTML file");
+        }
+    }
+
+    getRole();
 
 
 
