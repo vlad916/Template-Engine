@@ -20,7 +20,7 @@ const employeeDetails = [{
     },
     {
         type: "number",
-        message: "What is your Team member's Id",
+        message: "What is your Team member's Id:",
         name: "id",
         validate: (input) => {
             if (/^[0-9]+$/gi.test(input.trim()) === true) {
@@ -32,7 +32,7 @@ const employeeDetails = [{
     },
     {
         type: "input",
-        message: "What is your Team member's Email address",
+        message: "What is your Team member's Email address:",
         name: "email",
         validate: (character) => {
             const emailFilter = character.match (/^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/);
@@ -46,7 +46,7 @@ const employeeDetails = [{
 
     const managerDetails = [{
             type: "input",
-            message: "What is your Manager's office number",
+            message: "What is your Manager's office number:",
             name: "officeNum",
             validate: (input) => {
                 if (/^[0-9]+$/gi.test(input.trim()) === true) {
@@ -57,7 +57,22 @@ const employeeDetails = [{
             filter: (input) => input.trim()
     }];
 
+    const engineerDetails = [{
+            type: "input",
+            message: "What is Engineer's GitHub username:",
+            name: "github",
+            validate: (input) => {
+                if (/.\S+/gi.test(input.trim()) === true) {
+                    return true;
+                }
+                return "Please enter a valid username";
+            },
+            filter: (input) => input.trim()
+    }];
+
     
+
+
 
 
 
