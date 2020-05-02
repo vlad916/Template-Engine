@@ -14,7 +14,7 @@ https://github.com/vlad916/Template-Engine
 
 <img src="images/team.png">
 
-
+___
 ## Instructions on how to use the application:
 
 1. Clone the repository.
