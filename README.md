@@ -11,6 +11,10 @@ https://github.com/vlad916/Template-Engine
 ### Link for the Video (DEMO):
 
 
+
+<img src="images/team.png">
+
+
 ## Instructions on how to use the application:
 
 1. Clone the repository.
