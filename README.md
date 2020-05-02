@@ -11,7 +11,7 @@ https://github.com/vlad916/Template-Engine
 ### Link for the Video (DEMO):
 
 
-## Instructions
+## Instructions on how to use the application:
 
 1. Clone the repository.
 
