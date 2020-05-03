@@ -20,7 +20,7 @@ ___
 
 1. Clone the repository.
 
-2. Open the `app.js` in visual studio or any code editor of your choice.
+2. Open the `app.js` file in visual studio or any code editor of your choice.
 
 3. Install all npm packages with `npm install`.
 
