@@ -9,26 +9,12 @@ const render = require("./lib/htmlRenderer");
 const employeeDetails = [{
         type: "input",
         message: "What is your Team member's name:",
-        name: "name",
-        validate: (input) => {
-        if (/[a-z\s\-]+/gi.test(input.trim()) === true) {
-            return true;
-        }
-        return "Please enter a valid name";
-        },
-        filter: (input) => input.trim ()
+        name: "name"     
     },
     {
         type: "input",
         message: "What is your Team member's Id:",
-        name: "id",
-        validate: (input) => {
-            if (/^[0-9]+$/gi.test(input.trim()) === true) {
-                return true;
-            }
-            return "Please enter a valid number";
-        },
-        filter: (input) => input.trim()
+        name: "id"     
     },
     {
         type: "input",
@@ -47,40 +33,19 @@ const employeeDetails = [{
     const managerDetails = [{
             type: "input",
             message: "What is your Manager's office number:",
-            name: "officeNum",
-            validate: (input) => {
-                if (/^[0-9]+$/gi.test(input.trim()) === true) {
-                    return true;
-                }
-                return "Please enter a valid number";
-            },
-            filter: (input) => input.trim()
+            name: "officeNum"
     }];
 
     const engineerDetails = [{
             type: "input",
             message: "What is Engineer's GitHub username:",
-            name: "github",
-            validate: (input) => {
-                if (/.\S+/gi.test(input.trim()) === true) {
-                    return true;
-                }
-                return "Please enter a valid username";
-            },
-            filter: (input) => input.trim()
+            name: "github"        
     }];
 
     const internDetails = [{
             type: "input",
             message: "What is your Intern's school:",
-            name: "school",
-            validate: (input) => {
-                if (/[a-z\s\-]+/gi.test(input.trim()) === true) {
-                    return true;
-                }
-                return 'Please enter a valid school name';
-            },
-            filter: (input) => input.trim()
+            name: "school"        
     }];
 
     let allDetails = [];
